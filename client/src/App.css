@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+#pozadina {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.4)), url("./images/slika1.jpg");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tijelo {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+#naziv {
+    color: red;
+    font-weight: bolder;
+    font-size: 80px;
+    margin-top: 50px;
+}
+
+.oblak {
+    background-color: white;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
   }
+  
+.topnav li {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ 
+.topnav li.active {
+    background-color: red;
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+.topnav li.desno {
+    float: right;
+}
+
+.card {
+    height: 220%;
+    margin-top: 120px;
+    width: 18rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.letter {
+    width: 500px;
+    height: 200px;
+}
+
+.sredina {
+    width: 500px;
+    justify-content: space-between;
+}
+
+.start {
+    margin-top: 70px;
+}
+
+.razmak {
+    margin-top: 40px;
 }

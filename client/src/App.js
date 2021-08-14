@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css"
+import { BrowserRouter, Switch, Route } from "react-router-dom"
+import NavBar from "./NavBar";
+import Contact from "./contact";
+import Home from "./home";
+import Login from "./login";
+import Signup from "./signup";
 
 function App() {
+  let putanja = window.location.pathname
+  let broj = 0
+  if (putanja === "/")
+    broj = 1
+  else if (putanja === "/contact")
+    broj = 2
+  else if (putanja === "/login")
+    broj = 3
+  else if (putanja === "/signup")
+    broj = 4
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div id="pozadina">
+        <NavBar broj={broj}></NavBar>
+        <Switch>
+          <Route exact path='/' component={Home}></Route>
+          <Route path='/contact' component={Contact}></Route>
+          <Route path="/login" component={Login}></Route>
+          <Route path="/signup" component={Signup}></Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
