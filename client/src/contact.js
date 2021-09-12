@@ -10,28 +10,28 @@ function Contact() {
             <div className="row gx-5 justify-content-center">
                 <form action="http://127.0.0.1:3000" method="POST">
                     <div className="row gx-5 justify-content-center razmak">
-                        <div class="mb-3">
-                            <label for="InputFirstName" class="form-label">First name</label>
-                            <input type="text" class="form-control" id="InputFirstName" aria-describedby="emailHelp"></input>
+                        <div className="mb-3">
+                            <label htmlFor="InputFirstName" className="form-label">First name</label>
+                            <input type="text" className="form-control" id="InputFirstName" required></input>
                         </div>
-                        <div class="mb-3">
-                            <label for="InputLastName" class="form-label">Last name</label>
-                            <input type="text" class="form-control" id="InputLastName" aria-describedby="emailHelp"></input>
+                        <div className="mb-3">
+                            <label htmlFor="InputLastName" className="form-label">Last name</label>
+                            <input type="text" className="form-control" id="InputLastName" required></input>
                         </div>
                     </div>
-                    <div class="mb-3 razmak">
-                        <label for="InputEmail1" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp"></input>
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    <div className="mb-3 razmak">
+                        <label htmlFor="InputEmail1" className="form-label">Email</label>
+                        <input type="email" className="form-control" id="InputEmail1" required></input>
+                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="row gx-5 justify-content-center razmak">
-                        <div class="mb-3">
-                            <label for="InputTextarea" class="form-label">What you want from us?</label>
-                            <textarea class="form-control letter" id="InputTextarea" aria-describedby="emailHelp"></textarea>
+                        <div className="mb-3">
+                            <label htmlFor="InputTextarea" className="form-label">What you want from us?</label>
+                            <textarea className="form-control letter" id="InputTextarea" required></textarea>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <button class="btn btn-primary" type="submit" disabled>Submit form</button>
+                    <div className="mb-3">
+                        <button className="btn btn-primary" type="submit" disabled>Submit form</button>
                     </div>
                 </form>
 

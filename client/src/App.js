@@ -6,6 +6,7 @@ import Contact from "./contact";
 import Home from "./home";
 import Login from "./login";
 import Signup from "./signup";
+import HomeUser from "./homeUser";
 
 function App() {
   let putanja = window.location.pathname
@@ -27,6 +28,7 @@ function App() {
           <Route path='/contact' component={Contact}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/signup" component={Signup}></Route>
+          <Route path="/userhome" component={HomeUser}></Route> 
         </Switch>
       </div>
     </BrowserRouter>

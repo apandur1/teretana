@@ -5,6 +5,8 @@ module.exports = function (sequelize, DataTypes) {
     const Osoba = sequelize.define('Osoba', {
         ime: Sequelize.STRING,
         prezime: Sequelize.STRING,
+        email: Sequelize.STRING,
+        sifra: Sequelize.STRING,
         student: {
             type: Sequelize.STRING,
             validate: {
