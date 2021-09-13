@@ -44,8 +44,8 @@ class Signup extends React.Component {
             confirmErr = "Molimo Vas potvrdite sifru"
         else if (this.state.confirm !== this.state.password)
             confirmErr = "Niste dobro potvrdili sifru"
-        if (!this.state.kartica)
-            karticaErr = "Unesite broj kartice"
+        // if (!this.state.kartica)
+        //     karticaErr = "Unesite broj kartice"
         /*if (!this.state.student)
             studentErr = "Molimo vas unesite da li ste student"*/
         if (!this.state.spol)
@@ -92,7 +92,7 @@ class Signup extends React.Component {
             dodajUseraAjax.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
             dodajUseraAjax.send(JSON.stringify({
                 ime: this.state.firstName, prezime: this.state.lastName, email: this.state.email,
-                sifra: this.state.password, student: student, spol: this.state.spol, trener: "Ne", ClanarinaId: this.state.kartica
+                sifra: this.state.password, student: student, spol: this.state.spol, trener: "Ne", ClanarinaId: 173
             }))
         }
         else {
@@ -173,7 +173,7 @@ class Signup extends React.Component {
                         </div>
                         <div className="mb-3">
                             <label htmlFor="InputKartica" className="form-label">Broj kartice</label>
-                            <SelectKomponenta></SelectKomponenta>
+                            
                             <div className="greska">
                                 {this.state.karticaErr}
                             </div>
