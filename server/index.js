@@ -25,8 +25,12 @@ app.get("/osobe", (req, res) => {
     })
 })
 
-app.get("/osoba/:id/:sifra", (req, res) => {
-    db.Osoba.findOne({where: {sifra: req.params.sifra, ClanarinaId: req.params.id}}).then(d => res.json(d)).catch(d => console.log("Ne valja"))
+app.get("/osoba/:id", (req, res) => {
+    db.Osoba.findOne({where: {ClanarinaId: req.params.id}}).then(d => res.json(d)).catch(d => console.log("Ne valja"))
+})
+
+app.get("/maxClanarina", (req, res) => {
+    db.Osoba.max('ClanarinaId').then(d => res.json(d)).catch(d => console.log("ne valja"))
 })
 
 app.post("/osoba", (req, res) => {
