@@ -19,7 +19,7 @@ function Login() {
     dajUseraAjax.onreadystatechange = function () {
       if (dajUseraAjax.readyState === 4 && dajUseraAjax.status === 200) {
         let osoba = JSON.parse(dajUseraAjax.response);
-        if(osoba) {
+        if(osoba && osoba.sifra === password) {
             window.location.pathname = "/loggedUser"
         }
       } else if (dajUseraAjax.readyState === 4 && dajUseraAjax.status === 404)
@@ -27,7 +27,7 @@ function Login() {
     };
     dajUseraAjax.open(
       "GET",
-      "http://127.0.0.1:3000/osoba/" + kartica + "/" + password
+      "http://127.0.0.1:3000/osoba/" + kartica
     );
     dajUseraAjax.setRequestHeader(
       "Content-Type",
