@@ -44,7 +44,7 @@ class Signup extends React.Component {
     spolErr: "",
     karticaErr: "",
   };
-  
+
   validate = () => {
     let firstNameErr = "";
     let lastNameErr = "";
@@ -94,10 +94,10 @@ class Signup extends React.Component {
     return true;
   };
 
-    sacuvajClanarinu = (x) => {
-      this.setState({kartica: x})
-      console.log(this.state.kartica)
-  }
+  sacuvajClanarinu = (x) => {
+    this.setState({ kartica: x });
+    console.log(this.state.kartica);
+  };
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -282,7 +282,7 @@ class Signup extends React.Component {
               <div className="greska">{this.state.spolErr}</div>
             </div>
             <div className="mb-3">
-              <Kartica dajClanarinu = {this.sacuvajClanarinu}/>
+              <Kartica dajClanarinu={this.sacuvajClanarinu} />
               <div className="greska">{this.state.karticaErr}</div>
             </div>
             <div className="mb-3">

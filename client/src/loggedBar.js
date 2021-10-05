@@ -7,6 +7,10 @@ function LoggedBar() {
     window.location.reload();
   }
 
+  function ocistiLocalStorage() {
+    localStorage.clear();
+  }
+
   return (
     <nav className="topnav">
       <ul onClick={refresh}>
@@ -14,7 +18,9 @@ function LoggedBar() {
           <li className="active">Profil</li>
         </Link>
         <Link to="/login">
-          <li className="desno">Log out</li>
+          <li className="desno" onClick={ocistiLocalStorage}>
+            Log out
+          </li>
         </Link>
       </ul>
     </nav>

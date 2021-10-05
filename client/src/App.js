@@ -9,6 +9,8 @@ import Signup from "./signup";
 import HomeUser from "./homeUser";
 import LoggedUser from "./loggedUser";
 import LoggedBar from "./loggedBar";
+import Admin from "./admin";
+import Trener from "./trener";
 
 function App() {
   let putanja = window.location.pathname;
@@ -21,11 +23,13 @@ function App() {
   else if (putanja === "/login") broj = 3;
   else if (putanja === "/signup") broj = 4;
 
-  if (putanja === "/loggedUser") {
-    barKod = (<LoggedBar />)
-  }
-  else 
-    barKod = (<NavBar broj={broj}></NavBar>)
+  if (
+    putanja === "/loggedUser" ||
+    putanja === "/admin" ||
+    putanja === "/trener"
+  ) {
+    barKod = <LoggedBar />;
+  } else barKod = <NavBar broj={broj}></NavBar>;
 
   return (
     <BrowserRouter>

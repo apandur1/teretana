@@ -9,7 +9,7 @@ function SelectKomponenta() {
       if (dajClanarine.readyState === 4 && dajClanarine.status === 200) {
         let osobe = JSON.parse(dajClanarine.response);
         osobe.forEach((element) => {
-          array.push(+(element.ClanarinaId));
+          array.push(+element.ClanarinaId);
         });
       } else if (dajClanarine.readyState === 4 && dajClanarine.status === 404)
         console.log("Greska");
@@ -20,16 +20,16 @@ function SelectKomponenta() {
   }
 
   let niz = [];
-  let pomocni = dajNizClanarina()
-  console.log(pomocni)
+  let pomocni = dajNizClanarina();
+  console.log(pomocni);
 
   for (let i = 1; i <= 999; i++) {
     //if (!pomocni.includes(i)) {
-      niz.push(i);
+    niz.push(i);
     //}
   }
-  let razlika = niz.filter(element => pomocni.includes(element))
-  
+  let razlika = niz.filter((element) => pomocni.includes(element));
+
   let opcija = function (x) {
     return (
       <option value={x} key={x}>
@@ -37,7 +37,7 @@ function SelectKomponenta() {
       </option>
     );
   };
-  
+
   return <select>{razlika.map(opcija)}</select>;
 }
 

@@ -25,13 +25,13 @@ function Contact() {
       .catch((err) => {
         console.log("FAILED...", err);
       });
-      setToSend({
-        first_name: "",
-        last_name: "",
-        to_name: "Amel",
-        message: "",
-        reply_to: "",
-      })
+    setToSend({
+      first_name: "",
+      last_name: "",
+      to_name: "Amel",
+      message: "",
+      reply_to: "",
+    });
   };
 
   const handleChange = (e) => {
@@ -39,21 +39,21 @@ function Contact() {
   };
 
   //email
-//   <div className="mb-3 razmak">
-//     <label htmlFor="InputEmail1" className="form-label">
-//       Email
-//     </label>
-//     <input
-//       type="email"
-//       className="form-control"
-//       id="InputEmail1"
-//       onChange={handleChange}
-//       required
-//     ></input>
-//     <div id="emailHelp" className="form-text">
-//       We'll never share your email with anyone else.
-//     </div>
-//   </div>;
+  //   <div className="mb-3 razmak">
+  //     <label htmlFor="InputEmail1" className="form-label">
+  //       Email
+  //     </label>
+  //     <input
+  //       type="email"
+  //       className="form-control"
+  //       id="InputEmail1"
+  //       onChange={handleChange}
+  //       required
+  //     ></input>
+  //     <div id="emailHelp" className="form-text">
+  //       We'll never share your email with anyone else.
+  //     </div>
+  //   </div>;
 
   return (
     <div className="tijelo container col-8 offset-2 justify-content-center">

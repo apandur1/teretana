@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Kartica(props) {
   const [kartica, setKartica] = useState("");
@@ -18,7 +18,7 @@ function Kartica(props) {
         // }
         if (!kartica) {
           setKartica(osobe + 1);
-          props.dajClanarinu(osobe+1);
+          props.dajClanarinu(osobe + 1);
         }
         return osobe;
       } else if (dajClanarine.readyState === 4 && dajClanarine.status === 404)

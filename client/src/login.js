@@ -14,21 +14,19 @@ function Login() {
   }
 
   function loginButtonHandler(event) {
-    event.preventDefault()
+    event.preventDefault();
     const dajUseraAjax = new XMLHttpRequest();
     dajUseraAjax.onreadystatechange = function () {
       if (dajUseraAjax.readyState === 4 && dajUseraAjax.status === 200) {
         let osoba = JSON.parse(dajUseraAjax.response);
-        if(osoba && osoba.sifra === password) {
-            window.location.pathname = "/loggedUser"
+        if (osoba && osoba.sifra === password) {
+          localStorage.setItem("user", kartica);
+          window.location.pathname = "/loggedUser";
         }
       } else if (dajUseraAjax.readyState === 4 && dajUseraAjax.status === 404)
         console.log("Greska");
     };
-    dajUseraAjax.open(
-      "GET",
-      "http://127.0.0.1:3000/osoba/" + kartica
-    );
+    dajUseraAjax.open("GET", "http://127.0.0.1:3000/osoba/" + kartica);
     dajUseraAjax.setRequestHeader(
       "Content-Type",
       "application/json;charset=UTF-8"
